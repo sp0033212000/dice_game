@@ -26,7 +26,7 @@ $(document).ready(function() {
                     "betType": type,
                     "ratio": parseInt($(this).data('ratio'), 10),
                     "point": parseInt($(this).data('point'), 10),
-                    "betMoney": parseInt(_betMoney, 10)
+                    "betMoney": parseInt(_betMoney, 10),
                 }
                 // console.log($(this).data('ratio'));
             } else {

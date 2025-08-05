@@ -61,7 +61,7 @@ batStart = function(dice1, dice2, dice3) {
         var result = null;
         var type = statusMap[key].betType;
         var betMoney = statusMap[key].betMoney;
-        var oddsRatio = statusMap[key].oddsRatio;
+        var oddsRatio = statusMap[key].ratio;
         var point =statusMap[key].point;
         
         switch(type) {
