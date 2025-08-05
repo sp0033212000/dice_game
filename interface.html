@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ji-Wei's Casino</title>
+        <link rel="stylesheet" href="stylesheet.css" type="text/css">
+        <script type="text/javascript" src="npm\jquery.min.js"></script>
+        <script src="func\processer.js"></script>
+        <script src="func\executor.js"></script>
+    </head>
+    <body>
+        <div class='dice_body'>
+            <div class='dice_head title'>
+                <input type="button" value="Start" class="start">
+                <div id="times">
+                    <input type="button" value="x10" data-val='10' id="_times">
+                    <input type="button" value="x50" data-val='50' id="_times">
+                    <input type="button" value="x100" data-val='100' id="_times">
+                </div>
+                <input type="button" value="Reset" class="reset">
+            </div>
+            <div class='rw rw-1'>
+                <div class='bettype rd rd-b big' id='big' data-ratio='2'>
+                    <span class='big betMoney'></span>
+                    <div class="text">
+                        <p>BIG</p>
+                        <p>Odds : 1</p>
+                    </div>
+                </div>
+                <div class="rd triple">
+                    <div class='bettype tds tri tri-6' id='triple_6' data-ratio='151' data-point='6'>
+                        <span class='triple_6 betMoney'></span>
+                        <img src="pic/tri-6.png" alt="">
+                    </div>
+                    <div class='bettype tds tri tri-5' id='triple_5' data-ratio='151' data-point='5'>
+                        <span class='triple_5 betMoney'></span>
+                        <img src="pic/tri-5.png" alt="">
+                    </div>
+                    <div class='bettype tds tri tri-4' id='triple_4' data-ratio='151' data-point='4'>
+                        <span class='triple_4 betMoney'></span>
+                        <img src="pic/tri-4.png" alt="">
+                    </div>
+                    <div class='tds odds'>
+                        <p>Odds : 150</p>
+                    </div>
+                    <div class='bettype tds tri tri-3' id='triple_3' data-ratio='151' data-point='3'>
+                        <span class='triple_3 betMoney'></span>
+                        <img src="pic/tri-3.png" alt="">
+                    </div>
+                    <div class='bettype tds tri tri-2' id='triple_2' data-ratio='151' data-point='2'>
+                        <span class='triple_2 betMoney'></span>
+                        <img src="pic/tri-2.png" alt="">
+                    </div>
+                    <div class='bettype tds tri tri-1' id='triple_1' data-ratio='151' data-point='1'>
+                        <span class='triple_1 betMoney'></span>
+                        <img src="pic/tri-1.png" alt="">
+                    </div>
+                </div>
+                <div class='bettype rd rd-b small' id="small" data-ratio='2'>
+                    <span class='small betMoney'></span>
+                    <div class="text">
+                        <p>SMALL</p>
+                        <p>Odds : 1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rw rw-2">
+                <div class="bettype td po po-4" id="point_4" data-ratio='51' data-point="4">
+                    <span class='point_4 betMoney'></span>
+                    <p>4</p>
+                    <p>x50</p>
+                </div>
+                <div class="bettype td po po-5" id="point_5" data-ratio='19' data-point="5">
+                    <span class='point_5 betMoney'></span>
+                    <p>5</p>
+                    <p>x18</p>
+                </div>
+                <div class="bettype td po po-6" id="point_6" data-ratio='15' data-point="6">
+                    <span class='point_6 betMoney'></span>
+                    <p>6</p>
+                    <p>x14</p>
+                </div>
+                <div class="bettype td po po-7" id="point_7" data-ratio='13' data-point="7">
+                    <span class='point_7 betMoney'></span>
+                    <p>7</p>
+                    <p>x12</p>
+                </div>
+                <div class="bettype td po po-8" id="point_8" data-ratio='9' data-point="8">
+                    <span class='point_8 betMoney'></span>
+                    <p>8</p>
+                    <p>x8</p>
+                </div>
+                <div class="bettype td po po-9" id="point_9" data-ratio='7' data-point="9">
+                    <span class='point_9 betMoney'></span>
+                    <p>9</p>
+                    <p>x6</p>
+                </div>
+                <div class="bettype td po po-10" id="point_10" data-ratio='7' data-point="10">
+                    <span class='point_10 betMoney'></span>
+                    <p>10</p>
+                    <p>x6</p>
+                </div>
+                <div class="bettype td po po-11" id="point_11" data-ratio='7' data-point="11">
+                    <span class='point_11 betMoney'></span>
+                    <p>11</p>
+                    <p>x6</p>
+                </div>
+                <div class="bettype td po po-12" id="point_12" data-ratio='7' data-point="12">
+                    <span class='point_12 betMoney'></span>
+                    <p>12</p>
+                    <p>x6</p>
+                </div>
+                <div class="bettype td po po-13" id="point_13" data-ratio='9' data-point="13">
+                    <span class='point_13 betMoney'></span>
+                    <p>13</p>
+                    <p>x8</p>
+                </div>
+                <div class="bettype td po po-14" id="point_14" data-ratio='13' data-point="14">
+                    <span class='point_14 betMoney'></span>
+                    <p>14</p>
+                    <p>x12</p>
+                </div>
+                <div class="bettype td po po-15" id="point_15" data-ratio='15' data-point="15">
+                    <span class='point_15 betMoney'></span>
+                    <p>15</p>
+                    <p>x14</p>
+                </div>
+                <div class="bettype td po po-16" id="point_16" data-ratio='19' data-point="16">
+                    <span class='point_16 betMoney'></span>
+                    <p>16</p>
+                    <p>x18</p>
+                </div>
+                <div class="bettype td po po-17" id="point_17" data-ratio='51' data-point="17">
+                    <span class='point_17 betMoney'></span>
+                    <p>17</p>
+                    <p>x50</p>
+                </div>
+            </div>
+            <div class="rw rw-3">
+                    <div class='bettype rd rd-b odd' id="odd" data-ratio='2'>
+                        <span class='odd betMoney'></span>
+                        <div class="text">
+                            <p>ODD</p>
+                            <p>Odds : 1</p>
+                        </div>
+                    </div>
+                    <div class="rd double">
+                        <div class='bettype tds dou dou-6' id="double_6" data-ratio='9' data-point="6">
+                            <span class='double_6 betMoney'></span>
+                            <img src="pic/dou-6.png" alt="">
+                        </div>
+                        <div class='bettype tds dou dou-5' id="double_5" data-ratio='9' data-point="5">
+                            <span class='double_5 betMoney'></span>
+                            <img src="pic/dou-5.png" alt="">
+                        </div>
+                        <div class='bettype tds dou dou-4' id="double_4" data-ratio='9' data-point="4">
+                            <span class='double_4 betMoney'></span>
+                            <img src="pic/dou-4.png" alt="">
+                        </div>
+                        <div class='tds odds'>
+                            <p>Odds : 8</p>
+                        </div>
+                        <div class='bettype tds dou dou-3' id="double_3" data-ratio='9' data-point="3">
+                            <span class='double_3 betMoney'></span>
+                            <img src="pic/dou-3.png" alt="">
+                        </div>
+                        <div class='bettype tds dou dou-2' id="double_2" data-ratio='9' data-point="2">
+                            <span class='double_2 betMoney'></span>
+                            <img src="pic/dou-2.png" alt="">
+                        </div>
+                        <div class='bettype tds dou dou-1' id="double_1" data-ratio='9' data-point="1">
+                            <span class='double_1 betMoney'></span>
+                            <img src="pic/dou-1.png" alt="">
+                        </div>
+                    </div>
+                    <div class='bettype rd rd-b even' id="even" data-ratio='2'>
+                        <span class='even betMoney'></span>
+                        <div class="text">
+                            <p>EVEN</p>
+                            <p>Odds : 1</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="log">
+            <div class="log_title">
+                <p></p>
+            </div>
+            <div class="log_main">
+                    <div id="dice">
+                        <div id="dice_11">
+                            <div id="dice_2">
+                                <div id="dice_3">
+                                        <div id="dice_block_1">
+                                            <div id="dice_block">
+                                                <p id="dot_1"></p>
+                                            </div>
+                                            <div id="dice_block">
+                                                <p id="dot_2"></p>
+                                            </div>
+                                            <div id="dice_block">
+                                                <p id="dot_3"></p>
+                                            </div>
+                                        </div>
+                                        <div id="dice_block_2">
+                                            <div id="dice_block">
+                                                <p id="dot_4"></p>
+                                            </div>
+                                            <div id="dice_block">
+                                                <p id="dot_5"></p>
+                                            </div>
+                                            <div id="dice_block">
+                                                <p id="dot_6"></p>
+                                            </div>
+                                        </div>
+                                        <div id="dice_block_3">
+                                            <div id="dice_block">
+                                                <p id="dot_7"></p>
+                                            </div>
+                                            <div id="dice_block">
+                                                <p id="dot_8"></p>
+                                            </div>
+                                            <div id="dice_block">
+                                                <p id="dot_9"></p>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="dice_12">
+                            <div id="dice_2">
+                                <div id="dice_3">
+                                    <div id="dice_block_1">
+                                        <div id="dice_block">
+                                            <p id="dot_1"></p>
+                                        </div>
+                                        <div id="dice_block">
+                                            <p id="dot_2"></p>
+                                        </div>
+                                        <div id="dice_block">
+                                            <p id="dot_3"></p>
+                                        </div>
+                                    </div>
+                                    <div id="dice_block_2">
+                                        <div id="dice_block">
+                                            <p id="dot_4"></p>
+                                        </div>
+                                        <div id="dice_block">
+                                            <p id="dot_5"></p>
+                                        </div>
+                                        <div id="dice_block">
+                                            <p id="dot_6"></p>
+                                        </div>
+                                    </div>
+                                    <div id="dice_block_3">
+                                        <div id="dice_block">
+                                            <p id="dot_7"></p>
+                                        </div>
+                                        <div id="dice_block">
+                                            <p id="dot_8"></p>
+                                        </div>
+                                        <div id="dice_block">
+                                            <p id="dot_9"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="dice_13">
+                            <div id="dice_2">
+                                <div id="dice_3">
+                                        <div id="dice_block_1">
+                                            <div id="dice_block">
+                                                <p id="dot_1"></p>
+                                            </div>
+                                            <div id="dice_block">
+                                                <p id="dot_2"></p>
+                                            </div>
+                                            <div id="dice_block">
+                                                <p id="dot_3"></p>
+                                            </div>
+                                        </div>
+                                        <div id="dice_block_2">
+                                            <div id="dice_block">
+                                                <p id="dot_4"></p>
+                                            </div>
+                                            <div id="dice_block">
+                                                <p id="dot_5"></p>
+                                            </div>
+                                            <div id="dice_block">
+                                                <p id="dot_6"></p>
+                                            </div>
+                                        </div>
+                                        <div id="dice_block_3">
+                                            <div id="dice_block">
+                                                <p id="dot_7"></p>
+                                            </div>
+                                            <div id="dice_block">
+                                                <p id="dot_8"></p>
+                                            </div>
+                                            <div id="dice_block">
+                                                <p id="dot_9"></p>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="log_body"></div>
+            </div>
+        </div>
+    </body>
+</html>
